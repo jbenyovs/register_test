@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Register Test</title>
+    <link rel="stylesheet" href="https://downloads.momentum-ui.com/@momentum-ui/core/css/momentum-ui.css">
+    <style>
+      main {
+        padding: 10px;
+      }
+      table {
+        border-collapse: collapse;
+        padding: 10px;
+        margin: 10px;
+      }
+      table, th, td {
+        border: 1px solid black;
+      }
+      thead th {
+        font-weight: bold;
+      }
+      tbody td {
+        min-width: 150px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Register test</h1>
+
+      <form id="credentials">
+        <fieldset>
+          <fieldset id="token-auth" style="display: 'block'">
+            <legend>Authentication with Access Token </legend>
+             <input
+               id="access-token"
+               name="accessToken"
+               placeholder="Your access token"
+               type="text">
+              <input id="webexInit" title="webex.init()" type="button" value="webex.init()">
+              <p id="webex-status">webex is not initialized</p>
+        </fieldset>
+      </form>
+      <form id="register-form">
+        <fieldset id="register-form-fieldset">
+          <legend>Register Device</legend>
+          <input id="register" title="register" type="button" value="Register" disabled>
+          <input id="unregister" title="unregister" type="button" value="Unregister" disabled>
+          <p id="register-status">device is UNREGISTERED</p>
+        </fieldset>
+      </form>
+    </main>
+
+    <script crossorigin src="https://unpkg.com/webex@^1/umd/webex.min.js"></script>
+    <!-- app.js is your application code -->
+    <script src="app.js"></script>
+  </body>
+</html>
